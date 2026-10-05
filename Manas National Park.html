@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manas National Park</title>
+<style>
+:root{--bg:#f3efe3;--ink:#1d2b22;--soft:#4d5c50;--card:#e8e2d0;--line:#c9c1a8;--accent:#b8671f;--deep:#12332f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1c15;--ink:#ece6d3;--soft:#a9b5a5;--card:#18291f;--line:#2f4435;--accent:#f2b66a}}
+:root[data-theme="dark"]{--bg:#0f1c15;--ink:#ece6d3;--soft:#a9b5a5;--card:#18291f;--line:#2f4435;--accent:#f2b66a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Georgia,"Times New Roman",serif}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.1;margin:0}
+.hero{position:relative;min-height:88vh;background:linear-gradient(#12332f,#2d5a4a 55%,#f2b66a);color:#f6ead2;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;padding:48px 24px 0}
+.hero h1{font-size:clamp(3.6rem,17vw,8rem);font-weight:700;letter-spacing:.02em;text-align:center;margin-top:8vh}
+.hero p.sub{text-align:center;font-style:italic;font-size:1.25rem;margin:.6rem auto 0;max-width:30ch}
+.scene{position:absolute;left:0;right:0;bottom:0;width:100%;height:55%}
+.mist{animation:drift 40s linear infinite alternate}
+@keyframes drift{from{transform:translateX(-6%)}to{transform:translateX(6%)}}
+@media (prefers-reduced-motion:reduce){.mist{animation:none}}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:20px;justify-content:center;padding:12px;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;font-family:system-ui,sans-serif;font-size:.95rem}
+nav a{color:var(--ink);text-decoration:none;white-space:nowrap}
+nav a:hover,nav a:focus-visible{color:var(--accent);outline:none;text-decoration:underline}
+main{max-width:760px;margin:0 auto;padding:0 22px}
+section{padding:64px 0 8px}
+h2{font-size:clamp(2rem,6vw,2.8rem);margin-bottom:18px}
+p{margin:0 0 1em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0}
+.stats div{border-left:3px solid var(--accent);padding:4px 14px}
+.stats b{display:block;font-size:1.5rem;font-family:"Playfair Display",Georgia,serif}
+.stats span{color:var(--soft);font-size:.9rem;font-family:system-ui,sans-serif}
+.animals{display:grid;gap:14px;margin-top:20px}
+details{background:var(--card);border-radius:10px;padding:14px 18px;border:1px solid var(--line)}
+summary{cursor:pointer;font-family:"Playfair Display",Georgia,serif;font-size:1.25rem;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--accent)}
+details[open] summary::after{content:"\2212"}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+details p{margin:10px 0 0;color:var(--soft)}
+.visit dl{margin:0}
+.visit dt{font-weight:bold;margin-top:16px;font-family:system-ui,sans-serif;font-size:.95rem;color:var(--accent)}
+.visit dd{margin:2px 0 0}
+.note{font-size:.9rem;color:var(--soft);font-family:system-ui,sans-serif;border-top:1px solid var(--line);padding-top:14px;margin-top:28px}
+footer{margin-top:70px;background:var(--deep);color:#f6ead2;text-align:center;padding:36px 22px calc(36px + env(safe-area-inset-bottom,0px));font-style:italic}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Manas</h1>
+  <p class="sub">Where the wild still breathes</p>
+  <svg class="scene" viewBox="0 0 400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <circle cx="290" cy="60" r="22" fill="#fff0c2"/>
+    <path d="M0 90 Q60 50 120 80 T260 70 T400 85 V220 H0Z" fill="#6f8f7a"/>
+    <path d="M0 120 Q80 80 160 110 T320 100 T400 115 V220 H0Z" fill="#4f7561"/>
+    <g class="mist"><rect x="-40" y="105" width="480" height="22" fill="#f6ead2" opacity=".28" rx="11"/></g>
+    <path d="M0 150 Q100 125 200 145 T400 140 V220 H0Z" fill="#33573f"/>
+    <path d="M0 185 Q120 165 240 182 T400 176 V220 H0Z" fill="#1c3320"/>
+    <path d="M0 205 Q100 192 220 203 T400 198 V220 H0Z" fill="#0f1f14"/>
+    <g fill="#0e1a12"><ellipse cx="70" cy="178" rx="26" ry="12"/><circle cx="96" cy="170" r="8"/><rect x="52" y="180" width="6" height="14"/><rect x="64" y="180" width="6" height="14"/><rect x="78" y="180" width="6" height="14"/><rect x="90" y="178" width="6" height="14"/><path d="M102 172 q10 6 6 22 l-4 0 q2 -12 -6 -16z"/></g>
+    <g fill="#0e1a12"><ellipse cx="320" cy="190" rx="22" ry="9"/><ellipse cx="345" cy="186" rx="9" ry="6"/><path d="M350 182 l7 -9 l-3 10z"/><rect x="305" y="192" width="5" height="10"/><rect x="332" y="192" width="5" height="10"/></g>
+  </svg>
+</header>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#wildlife">Wildlife</a><a href="#visit">Plan a visit</a></nav>
+<main>
+<section id="about">
+  <h2>A river, a forest, and a border</h2>
+  <p>Manas National Park sits in Assam, India, where the Himalayan foothills of Bhutan meet the Brahmaputra plains. The Manas River runs through it, feeding grassland, wetland and tropical forest in one unbroken landscape.</p>
+  <p>It is a UNESCO World Heritage Site, a Project Tiger reserve and an elephant reserve. In the late twentieth century conflict and poaching took a heavy toll, and since then the park has recovered, which is part of what makes it worth visiting today.</p>
+  <div class="stats">
+    <div><b>1985</b><span>named a World Heritage Site</span></div>
+    <div><b>Assam</b><span>Himalayan foothills, India</span></div>
+    <div><b>Manas River</b><span>the park's lifeline</span></div>
+  </div>
+</section>
+<section id="wildlife">
+  <h2>Who lives here</h2>
+  <p>Tap a name to read more.</p>
+  <div class="animals">
+    <details><summary>One-horned rhinoceros</summary><p>Grassland giants that were lost here and later reintroduced. Look for them near open grass and wallows.</p></details>
+    <details><summary>Asian elephant</summary><p>Herds move through the forest edge and cross the river. Early morning is the best time to see them.</p></details>
+    <details><summary>Bengal tiger</summary><p>The park is a tiger reserve, but tigers are shy. Seeing one is rare, so treat it as a gift.</p></details>
+    <details><summary>Golden langur</summary><p>A rare primate with a cream-gold coat, found in the forests of this region and across the Bhutan border.</p></details>
+    <details><summary>Pygmy hog and wild water buffalo</summary><p>Two grassland and wetland species that depend on healthy, undisturbed habitat. Protecting that habitat protects them.</p></details>
+    <details><summary>Birds</summary><p>Hundreds of bird species have been recorded, including the Bengal florican and great hornbill. Bring binoculars.</p></details>
+  </div>
+</section>
+<section id="visit" class="visit">
+  <h2>Plan a visit</h2>
+  <dl>
+    <dt>Best time</dt><dd>Roughly November to April, when the weather is dry and wildlife is easiest to see. The park is usually closed in the monsoon.</dd>
+    <dt>Getting there</dt><dd>Fly into Guwahati, then travel by road to Barpeta Road, the usual base for the park.</dd>
+    <dt>Ways to explore</dt><dd>Jeep safari, elephant-corridor drives and river rafting on the Manas. Book through the park's official entry points.</dd>
+    <dt>Visit with care</dt><dd>Keep quiet, keep your distance, carry out all your waste and follow your guide's instructions.</dd>
+  </dl>
+  <p class="note">Entry rules, fees and open seasons change. Confirm with Assam Forest Department or Manas National Park before you travel.</p>
+</section>
+</main>
+<footer>Manas National Park &middot; Protect the wild, leave only footprints.</footer>
+</body>
+</html>
